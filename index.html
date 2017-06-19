@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head profile="http://purl.org/net/ns/metaprof">
+<!-- meta -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<!--[if lte IE 8.0]>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+<![endif]-->
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- link -->
+<link rel="start" href="/" title="ホーム">
+<link rel="stylesheet" href="map.css">
+
+
+<img src="01.png" width="640" height="595" border="0" alt="" usemap="#______1_Map">
+<map name="______1_Map">
+
+<area shape="rect" alt="" coords="448,251,570,381" href="s">
+<area shape="rect" alt="" coords="359,237,437,388" href="r">
+<area alt="" coords="250,278,351,384" href="https://www.yahoo.co.jp/" target="blank">
+<area shape="rect" alt="" coords="162,278,243,384" href="https://www.google.co.jp" target="blank">
+<area shape="rect" alt="" coords="62,197,174,399" href="d">
+
+</map>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
+
+</body>
+</html>
