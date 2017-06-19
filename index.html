@@ -24,6 +24,18 @@
 <img src="01.png" width="640" height="595" border="0" alt="" usemap="#______1_Map">
 <map name="______1_Map">
 
+<p><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script></p>
+
 <area shape="rect" alt="" coords="448,251,570,381" href="s">
 <area shape="rect" alt="" coords="359,237,437,388" href="r">
 <area alt="" coords="250,278,351,384" href="https://www.yahoo.co.jp/" target="blank">
